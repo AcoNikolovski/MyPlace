@@ -1,0 +1,17 @@
+﻿@model TestMVC.Models.Model1;
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Details";
+}
+
+<img src="@Model.ImageURL" />
+<h1>@Model.UserEmail</h1>
+
+
+<h2> Ingridiants</h2>
+<ul>
+    @foreach (var Image in @Model.Images)
+    {
+        <li> <img src="@Image" alt="Girl in a jacket" width="600" height="500">  </li>
+    }
+</ul>

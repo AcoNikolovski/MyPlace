@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container" style="margin-top:20px">
+    <div class="row">
+
+        @foreach (var recepe in Model)
+        {
+            @*----------------Cart------------------------------------*@
+            <div class="col-md-4">
+
+                <div class="card">
+                    <img src="@recepe.ImageURL" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@recepe.UserEmail</h5>
+                        <p class="card-text">
+                            @recepe.Created
+                        </p>
+                        
+                        <a href="/Home/Details/@recepe.Id" class="btn btn-primary">See more</a>
+                    </div>
+                </div>
+
+            </div>
+            @*----------------End Cart------------------------------------*@
+        }
+
+
+    </div>
+
+</div>
+
+
+
+
